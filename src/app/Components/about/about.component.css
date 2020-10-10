@@ -38,7 +38,7 @@
 }
 
 .flip-card-front {
-  background-color: #583258;
+  background: linear-gradient(to bottom, #a976b6, #576574);
   color: #fff;
   text-transform: uppercase !important;
   padding: 50px;
