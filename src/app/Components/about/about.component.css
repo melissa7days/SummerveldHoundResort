@@ -389,8 +389,6 @@ html {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.box-container .card:hover {
-}
 .box-container .card:hover:before {
   height: 180px;
 }
