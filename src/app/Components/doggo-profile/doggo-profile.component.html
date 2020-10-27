@@ -2,8 +2,10 @@
     <div class="main-container">
        <div class="profile">
           <div class="profile-avatar">
-             <img src="https://i.ibb.co/yq1GxBM/DSC04033.jpg" class="profile-img" alt="profile-img">
-             <div class="profile-name">Shenzi</div>
+             <div *ngIf="doggo">
+               <img src="https://i.ibb.co/yq1GxBM/DSC04033.jpg" class="profile-img" alt="profile-img">
+               <div class="profile-name">Shenzi</div>
+             </div>
           </div>
           <img src="https://i.ibb.co/yBLWyd8/horizons.png" alt="" class="profile-cover">
           <div class="profile-menu">
