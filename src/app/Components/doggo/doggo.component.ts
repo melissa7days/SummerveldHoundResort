@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Doggo } from 'src/app/Models/doggo';
 import { DoggoService } from 'src/app/Services/doggo/doggo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-doggo',
@@ -19,7 +20,7 @@ export class DoggoComponent implements OnInit {
     doggoDateCreated: new Date(Date.now())
   }
 
-  constructor(private doggoService: DoggoService) { }
+  constructor(private doggoService: DoggoService, private router: Router) { }
 
   ngOnInit(): void {
     this.getDoggos();
@@ -31,8 +32,9 @@ export class DoggoComponent implements OnInit {
     });
   }
 
-  onSelect(doggo: Doggo): void { 
-    this.selectedDoggo = doggo;
+  onSelect(doggo: Doggo): void {
+    this.router.navigateByUrl('summerveldhoundresort/doggo-profile/' + doggo.doggoId);
+    // this.selectedDoggo = doggo;
     console.log(this.selectedDoggo);
   }
 }

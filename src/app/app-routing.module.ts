@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'', component:AboutComponent},
   {path:'summerveldhoundresort/about', component:AboutComponent},
   {path:'summerveldhoundresort/doggo', component:DoggoComponent},
-  {path:'summerveldhoundresort/doggo-profile', component:DoggoProfileComponent},
+  {path:'summerveldhoundresort/doggo-profile/:doggoId', component:DoggoProfileComponent},
 ];
 
 @NgModule({

@@ -2,9 +2,13 @@
     <div class="main-container">
        <div class="profile">
           <div class="profile-avatar">
-             <div *ngIf="doggo">
-               <img src="https://i.ibb.co/yq1GxBM/DSC04033.jpg" class="profile-img" alt="profile-img">
-               <div class="profile-name">S</div>
+             <!-- <div *ngFor="let d of doggo">
+               <img src="{{d.doggoProfilePic}}" class="profile-img" alt="profile-img">
+               <div class="profile-name">{{d.doggoName}}</div>
+             </div> -->
+             <div *ngFor="let d of doggo" class="profile-avatar">
+               <img src="{{d.doggoProfilePic}}" alt="" class="profile-img">
+               <div class="profile-name">{{d.doggoName}}</div>
              </div>
           </div>
           <img src="https://i.ibb.co/yBLWyd8/horizons.png" alt="" class="profile-cover">
@@ -17,7 +21,7 @@
        </div>
        <div class="timeline">
           <div class="timeline-left">
-             <div class="intro-box">
+             <div *ngFor="let d of doggo" class="intro-box">
                 <div class="intro-title">
                    Intro
                    <button class="intro-menu"></button>
@@ -30,16 +34,17 @@
                       <i class="fa fa-home"></i> Lives in <span>Assagay, KwaZulu-Natal</span>
                    </div>
                    <div class="info-item">
-                      <i class="fa fa-paw"></i> Nickname <span>ShenShen</span>
+                      <i class="fa fa-paw"></i> Nickname <span>{{d.doggoNickname}}</span>
                    </div>
                 </div>
              </div>
              <div class="event box">
                 <div class="event-wrapper">
                    <div class="event-title">Life Events</div>
-                   <div class="event-body">
+                   <div class="event-body" >
                       <div class="row">
-                         <div class="col-sm-6">
+                         <div class="col-sm-12">
+                           <div *ngFor="let l of lifeEvent">
                             <div class="card">
                                <div class="card-body">
                                   <div class="last-vet-check-icon">
@@ -49,12 +54,13 @@
                                         </div>
                                      </div>
                                   </div>
-                                  <div class="last-vet-check-title">Last Vet Check</div>
-                                  <div class="last-vet-check-date">September 01, 2020</div>
+                                  <div class="last-vet-check-title">{{l.lifeEventName}}</div>
+                                  <div class="last-vet-check-date">{{l.lifeEventDate}}</div>
                                </div>
                             </div>
+                            </div>
                          </div>
-                         <div class="col-sm-6">
+                         <!-- <div class="col-sm-6">
                             <div class="card">
                                <div class="card-body">
                                   <div class="last-vet-check-icon">
@@ -68,7 +74,7 @@
                                   <div class="last-vet-check-date">April 04, 2020</div>
                                </div>
                             </div>
-                         </div>
+                         </div> -->
                       </div>
                    </div>
                 </div>

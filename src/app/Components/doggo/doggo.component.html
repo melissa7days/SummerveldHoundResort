@@ -16,7 +16,7 @@
             <div class="profile__info">
               <h3>{{doggo.doggoName}}</h3>
             </div>
-            <div class="profile__cta"><a class="button" routerLink="/summerveldhoundresort/doggo-profile"  [class.selected]="doggo === selectedDoggo"(click)="onSelect(doggo)">View {{doggo.doggoName}}'s Furbook</a></div>
+            <div class="profile__cta"><a class="button" [class.selected]="doggo === selectedDoggo"(click)="onSelect(doggo)">View {{doggo.doggoName}}'s Furbook</a></div>
           </div>
       </div>
     </div>
